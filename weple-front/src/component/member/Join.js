@@ -2,6 +2,7 @@ import { Button1, Button2 } from "../util/Button";
 import "./join.css";
 import { useEffect, useRef, useState } from "react";
 import JoinFrm from "./JoinFrm";
+import Swal from "sweetalert2";
 
 const Join = () => {
   /*
@@ -102,7 +103,7 @@ const Join = () => {
       document.getElementsByClassName("joinFrm-wrap")[0].style.display =
         "block";
     } else {
-      alert("필수 동의항목을 반드시 체크해주세요.");
+      Swal.fire("필수 동의항목을 반드시 체크해주세요.");
     }
   };
 
